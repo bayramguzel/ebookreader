@@ -37,12 +37,6 @@ jobs:
           flutter precache --ios
           flutter pub get
 
-      - name: Install CocoaPods dependencies
-        run: |
-          cd ios
-          pod install --repo-update
-          cd ..
-
       - name: Build iOS App (Release, No CodeSign)
         run: |
           flutter build ios --release --no-codesign
