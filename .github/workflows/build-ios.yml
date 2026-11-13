@@ -32,8 +32,10 @@ jobs:
           flutter --version
           xcodebuild -version
 
-      - name: Install dependencies
-        run: flutter pub get
+      - name: Precache iOS engine & install dependencies
+        run: |
+          flutter precache --ios
+          flutter pub get
 
       - name: Install CocoaPods dependencies
         run: |
