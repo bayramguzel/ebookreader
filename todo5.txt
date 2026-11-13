@@ -1,0 +1,30 @@
+**
+ebook reader calisiyor biraz daha iyi hale getirelim, manuel olarak ebooklara kitap resmi ekleyebileleim. pdf dosalarinda mümkün ise ilk sayfayi kitap sayfasi olarak gösterebiliriz. acilan bir ebook da isaretlenen sayfayi belirt ve o kitaba girilince kaldigimiz yerden okuyabilelim. ayarlar icerisine de farkli renk temalari ekleyelim. Kitap ararken belli bir klasörü de gösterip komple taramasini saglayabilelim.
+
+Uygulamay hem ingilizce hem Türkce dillerinde olsun, ayarlar menüsünde en üstte dil secimi yapabilelim.
+
+*****
+
+-Gizlilik politikasi privacy_ebookreader.md olustur ve Gizlilik Butonunu www.41software.com\privacy\privacy_ebookreader.pdf linkine yönlendir
+-Ana menüde Hakkinda menüsün üstüne Sosyal Medyalar ve Bagis yap butonlarini ekleyelim ve bu asagidaki icerikleri ekleyelim:
+
+Bagis Linkleri:
+buymeacoffee.com/41software
+paypal@41software.com
+
+
+Sosyal medya Linkleri: 
+Youtube: @41softwarecom
+Instagram:41software
+Twitter: @41software
+Tiktok: @41software
+
+
+asagidaki bilgileri kullaranak microsoft clarity sistemini entegre et ve uygulamada en üstte naslik altina sabit banner ekle ve tüm sayfalarda görünür yap
+
+Microsoft Clarity: utjuctedx0
+google admob banner id:  ca-app-pub-2100987662328122/9966420045
+admob app id: ca-app-pub-2100987662328122~7100583552
+
+**
+anasayfada kitaplik ekle butonuna tikliyorum ama tek tek kitap ekleyebiliyorum, komple klasör secerek taratabilmeyi yada birden fazla kitap/dosya secebilmeyi sagla

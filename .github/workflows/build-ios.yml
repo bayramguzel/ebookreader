@@ -1,0 +1,73 @@
+name: Build iOS IPA
+
+on:
+  push:
+    branches: [ main, master ]
+    tags:
+      - 'v*'
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-ios:
+    name: Build iOS IPA
+    runs-on: macos-14
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+          cache: true
+
+      - name: Print Flutter & Xcode versions
+        run: |
+          flutter --version
+          xcodebuild -version
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Install CocoaPods dependencies
+        run: |
+          cd ios
+          pod install --repo-update
+          cd ..
+
+      - name: Build iOS App (Release, No CodeSign)
+        run: |
+          flutter build ios --release --no-codesign
+
+      - name: Package IPA
+        run: |
+          mkdir -p build/ios/ipa/Payload
+          cp -r build/ios/iphoneos/Runner.app build/ios/ipa/Payload/
+          cd build/ios/ipa
+          zip -r -q ebookreader-v1.6.0.ipa Payload
+          ls -la
+          echo "IPA Size:"
+          du -sh ebookreader-v1.6.0.ipa
+
+      - name: Upload IPA Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ebookreader-ios-ipa
+          path: build/ios/ipa/ebookreader-v1.6.0.ipa
+          if-no-files-found: error
+          retention-days: 14
+
+      - name: Release to GitHub Releases (on tag)
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: build/ios/ipa/ebookreader-v1.6.0.ipa
+          generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

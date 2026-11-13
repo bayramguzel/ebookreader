@@ -1,0 +1,65 @@
+name: ebookreader
+
+publish_to: 'none'
+description: "A modern, user-friendly eBook reader supporting PDF, EPUB, MOBI, FB2, CBZ, TXT, and HTML formats."
+version: 1.6.0+20
+
+environment:
+  sdk: ^3.10.3
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  flutter_screenutil: ^5.9.3
+
+  cupertino_icons: ^1.0.8
+  fb2_parse: ^1.0.1
+  image: ^3.3.0
+  syncfusion_flutter_pdfviewer: ^33.1.45
+  glassmorphic_ui_kit: ^1.1.6
+  shared_preferences: ^2.5.4
+  share_plus: ^12.0.1
+  file_picker: ^11.0.2
+  path_provider: ^2.1.5
+  permission_handler: ^12.0.1
+  epub_view: ^3.2.0
+  flutter_html: ^3.0.0
+  archive: ^3.6.1
+  dart_mobi: ^1.0.0
+  video_player: ^2.9.2
+  url_launcher: ^6.3.1
+  intl: ^0.20.2
+  pdfx: ^2.7.0
+  unity_ads_plugin: ^0.5.0
+  flutter_microsoft_clarity: ^1.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_launcher_icons: ^0.11.0
+  flutter_lints: ^3.0.0
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  remove_alpha_ios: true
+  image_path: "assets/logo.png"
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/logo.png
+    - assets/banner.jpg
+    - assets/splash.mp4
+    - assets/alice_in_wonderland.epub
+    - assets/frankenstein.epub
+
+flutter_icons:
+  android: true
+  ios: true
+  remove_alpha_ios: true
+  image_path: "assets/logo.png"
+  min_sdk_android: 21
+

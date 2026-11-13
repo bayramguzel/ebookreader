@@ -1,0 +1,7 @@
+uygulamayi incele Google Playde rahatca yayinlanabilecek kaliteli bir uygulama haline getir.
+assets/splash.mp4 dosyasini ekran acilisinda 2-3 saniye kadar sesiz oalrak splash ekran olarak göster
+assets/logo.png dosyasini uygulamam ikonu olarak yap
+
+android klasörü icerisindeki key.properties ve upload-keystore dosyalarini kullarank google play icin sifrelemeyi yap
+
+
